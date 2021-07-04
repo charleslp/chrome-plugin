@@ -14,3 +14,11 @@ $('#callbackjs').click(e=>{
     var bg = chrome.extension.getBackgroundPage();
     bg.back()
 })
+$('#show_badge').click(e=>{
+   chrome.browserAction.setBadgeText({text:"New"});
+   chrome.browserAction.setBadgeBackgroundColor({color:[0,255,0,255]})
+})
+$('#hide_badge').click(e=>{
+   chrome.browserAction.setBadgeText({text:""});
+   chrome.browserAction.setBadgeBackgroundColor({color:[0,0,0,0]})
+})
